@@ -1,4 +1,4 @@
-#include "./aug/205IsomorphicStrings.hpp"
+#include "./aug/392IsSubsequence.hpp"
 #include <iostream>
 using namespace std;
 
@@ -6,7 +6,7 @@ int main() {
   Solution *obj = new Solution();
 
   // String 
-  cout << obj->isIsomorphic("aaabbbab","bbbaaaab");
+  cout << obj->isSubsequence("acb","ahbgdc");
   
   // Single output
   // cout << obj->pivotIndex({1, 2, 4, 3});
