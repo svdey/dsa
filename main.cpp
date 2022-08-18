@@ -30,7 +30,7 @@ int main() {
   // list2->next->next = new ListNode(4);
 
   ListNode* list = obj->middleNode(list1);
-  while(list != nullptr){
+  while(list){
     cout << list->val<<' ';
     list = list->next;
   }
