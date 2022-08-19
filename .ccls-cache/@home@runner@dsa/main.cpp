@@ -1,17 +1,16 @@
 #include "./customHeaders/LinkedList.hpp"
 //    import class file
-#include "./aug/121BestTimetoBuyandSellStock.hpp"
+#include "./aug/409LongestPalindrome.hpp"
 #include <iostream>
 using namespace std;
 
 int main() {
   Solution *obj = new Solution();
-
   // String 
-  // cout << obj->isIsomorphic("acb","ahbgdc");
+  cout << obj->longestPalindrome("civilwartestingwhetherthatnaptionoranynartionsoconceivedandsodedicatedcanlongendureWeareqmetonagreatbattlefiemldoftzhatwarWehavecometodedicpateaportionofthatfieldasafinalrestingplaceforthosewhoheregavetheirlivesthatthatnationmightliveItisaltogetherfangandproperthatweshoulddothisButinalargersensewecannotdedicatewecannotconsecratewecannothallowthisgroundThebravelmenlivinganddeadwhostruggledherehaveconsecrateditfaraboveourpoorponwertoaddordetractTgheworldadswfilllittlenotlenorlongrememberwhatwesayherebutitcanneverforgetwhattheydidhereItisforusthelivingrathertobededicatedheretotheulnfinishedworkwhichtheywhofoughtherehavethusfarsonoblyadvancedItisratherforustobeherededicatedtothegreattdafskremainingbeforeusthatfromthesehonoreddeadwetakeincreaseddevotiontothatcauseforwhichtheygavethelastpfullmeasureofdevotionthatweherehighlyresolvethatthesedeadshallnothavediedinvainthatthisnationunsderGodshallhaveanewbirthoffreedomandthatgovernmentofthepeoplebythepeopleforthepeopleshallnotperishfromtheearth");
   
   // Single output
-  cout << obj->maxProfit({7,1,5,3,6,4});
+  // cout << obj->maxProfit({7,1,5,3,6,4});
   
   
   // vector output
