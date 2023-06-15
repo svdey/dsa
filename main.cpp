@@ -1,7 +1,7 @@
 #include "./customHeaders/LinkedList.hpp"
 //    import class file
 // #include "./aug/70ClimbingStairs.hpp"
-#include "./Oct/766ToeplitzMatrix.hpp"
+#include "./Nov/1706WhereWilltheBallFall.hpp"
 #include <iostream>
 using namespace std;
 
@@ -16,11 +16,15 @@ int main() {
   // cout << obj->search({-1,0,3,5,9,12},2);
 
   // vector output
-  // for (auto a : obj->maxProfit({7,1,5,3,6,4}))
-  //   cout << a << ',';
+  for (auto a : obj->findBall({{1, 1, 1, -1, -1},
+                               {1, 1, 1, -1, -1},
+                               {-1, -1, -1, 1, 1},
+                               {1, 1, 1, 1, -1},
+                               {-1, -1, -1, -1, -1}}))
+    cout << a << ',';
 
   // boolian Output
-  cout << obj->isToeplitzMatrix({{1,2,3,4},{5,1,2,3},{9,5,1,2}});
+  // cout << obj->isToeplitzMatrix({{1,2,3,4},{5,1,2,3},{9,5,1,2}});
 
   // Linked List
   // ListNode* list1 = new ListNode(1);
