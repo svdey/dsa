@@ -1,31 +1,19 @@
-all: main clean-deps
-
 CXX = clang++
-override CXXFLAGS += -g -Wno-everything
+CXXFLAGS = -std=c++17 -g -Wno-everything
 
-SRCS = $(shell find . -name '.ccls-cache' -type d -prune -o -type f -name '*.cpp' -print | sed -e 's/ /\\ /g')
-OBJS = $(SRCS:.cpp=.o)
-DEPS = $(SRCS:.cpp=.d)
+# Build the main test runner object file (compiled once to save time)
+test_runner.o: test_runner.cpp
+	$(CXX) $(CXXFLAGS) -c test_runner.cpp -o test_runner.o
 
-%.d: %.cpp
-	@set -e; rm -f "$@"; \
-	$(CXX) -MM $(CXXFLAGS) "$<" > "$@.$$$$"; \
-	sed 's,\([^:]*\)\.o[ :]*,\1.o \1.d : ,g' < "$@.$$$$" > "$@"; \
-	rm -f "$@.$$$$"
-
-%.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c "$<" -o "$@"
-
-include $(DEPS)
-
-main: $(OBJS)
-	$(CXX) $(CXXFLAGS) $(OBJS) -o "$@"
-
-main-debug: $(OBJS)
-	$(CXX) $(CXXFLAGS) -O0 $(OBJS) -o "$@"
+# Run tests for a specific problem file
+test: test_runner.o
+ifndef FILE
+	$(error FILE is not set. Usage: make test FILE=topic/problem.cpp)
+endif
+	$(CXX) $(CXXFLAGS) $(FILE) test_runner.o -o run_tests
+	./run_tests
 
 clean:
-	rm -f $(OBJS) $(DEPS) main
-
-clean-deps:
-	rm -f $(DEPS)
+	rm -f *.o run_tests main main-debug
+	find . -name "*.d" -type f -delete
+	find . -name "*.o" -type f -delete
