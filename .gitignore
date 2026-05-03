@@ -1,3 +1,17 @@
-*.O
+# Object files
+*.o
 
+# Dependency files
+*.d
+
+# Executables
+main
+main-debug
+*.out
 *.exe
+
+# macOS
+.DS_Store
+
+# IDEs and Tools
+.ccls-cache/
