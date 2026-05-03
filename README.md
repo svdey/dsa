@@ -7,6 +7,7 @@ This repository contains my Data Structures & Algorithms practice for interview 
 ## 📚 Topics Covered
 
 - Arrays
+- String
 - Hashing
 - Sliding Window
 - Linked List
@@ -21,6 +22,7 @@ This repository contains my Data Structures & Algorithms practice for interview 
 | Topic | Problems |
 |------|---------|
 | Arrays | 1 |
+| String | 1 |
 | Hashing | 1 |
 | Sliding Window | 1 |
 
@@ -29,10 +31,10 @@ This repository contains my Data Structures & Algorithms practice for interview 
 ## 🧠 Problems Solved
 
 ### Arrays / Hashing
-- Two Sum (LeetCode)
+- [Two Sum](./arrays/1two_sum.cpp)
 
-### Sliding Window
-- Longest Substring Without Repeating Characters
+### String / Sliding Window
+- [Longest Substring Without Repeating Characters](./string/3_longest_substring_without_repeating_characters.cpp)
 
 ---
 
