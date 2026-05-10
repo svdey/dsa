@@ -7,8 +7,10 @@
 # Executables
 main
 main-debug
+run_tests
 *.out
 *.exe
+*.dSYM/
 
 # macOS
 .DS_Store
